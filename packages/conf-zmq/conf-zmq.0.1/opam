@@ -3,7 +3,7 @@ maintainer: "unixjunkie@sdf.org"
 authors: "iMatix"
 homepage: "http://zeromq.org/"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
-license: "LGPL"
+license: "LGPL-2.0-or-later"
 build: [
   ["cc" "test.c" "-I/usr/local/include" "-L/usr/local/lib" "-lzmq"]
 ]
@@ -11,9 +11,10 @@ depexts: [
   ["libzmq3-dev"] {os-family = "debian"}
   ["zeromq"] {os = "macos" & os-distribution = "homebrew"}
   ["zeromq-dev"] {os-distribution = "alpine"}
-  ["zeromq-devel"] {os-distribution = "centos"}
+  ["epel-release" "zeromq-devel"] {os-distribution = "centos"}
   ["zeromq"] {os-distribution = "arch"}
   ["zeromq-devel"] {os-distribution = "fedora"}
+  ["zeromq-devel"] {os-family = "suse"}
 ]
 synopsis: "Virtual package relying on zmq library installation"
 description: """

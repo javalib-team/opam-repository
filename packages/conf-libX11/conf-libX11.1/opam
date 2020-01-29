@@ -8,14 +8,12 @@ build: [
   ["pkg-config" "x11"] {os != "macos"}
   [
     "sh" "-exc"
-    """
-    PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig" pkg-config --libs x11
-    """
+    """PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig" pkg-config --libs x11"""
   ] {os = "macos"}
 ]
 depends: ["conf-pkg-config" {build}]
 depexts: [
-  ["libx11-dev"] {os-distribution = "debian" | os-distribution = "ubuntu"}
+  ["libx11-dev"] {os-family = "debian"}
   ["libX11-devel"] {os-distribution = "centos" | os-distribution = "oraclelinux" | os-distribution = "fedora" | os-distribution = "opensuse"}
   ["libx11-dev"] {os-distribution = "alpine"}
   ["libx11`"] {os-distribution = "archlinux"}

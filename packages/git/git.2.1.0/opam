@@ -18,7 +18,7 @@ All the objects share a consistent API, and convenience functions are
 provided to manipulate the different objects."""
 
 build: [
-  ["dune" "subst"]
+  ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name] {with-test}
 ]
@@ -32,7 +32,7 @@ depends: [
   "fpath"      {>= "0.7.0"}
   "digestif"   {>= "0.7.2"}
   "lru"        {>= "0.3.0"}
-  "decompress" {>= "0.9.0"}
+  "decompress" {>= "0.9.0" & < "1.0.0"}
   "checkseum"  {>= "0.1.0"}
   "ke"
   "encore"

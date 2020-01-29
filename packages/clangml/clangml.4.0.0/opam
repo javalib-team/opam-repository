@@ -4,7 +4,7 @@ authors: ["Thierry Martinez <thierry.martinez@inria.fr>"]
 bug-reports: "https://gitlab.inria.fr/memcad/clangml"
 homepage: "https://gitlab.inria.fr/memcad/clangml"
 doc: "https://gitlab.inria.fr/memcad/clangml"
-license: "BSD"
+license: "BSD-3-Clause"
 dev-repo: "git+https://gitlab.inria.fr/memcad/clangml"
 synopsis: "OCaml bindings for Clang API"
 description: """
@@ -19,7 +19,7 @@ depends: [
   "ppxlib" {>= "0.6.0" & < "0.9.0"}
   "stdcompat" {>= "10"}
   "ppx_show" {>= "0.1.0"}
-  "ppx_compare" {>= "v0.12.0"}
+  "ppx_compare" {>= "v0.12.0" & < "v0.14"}
   "override" {>= "0.1.0"}
   "ocaml" {>= "4.04.0" & != "4.05.0" }
 ]

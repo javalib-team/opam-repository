@@ -25,8 +25,8 @@ depopts: [
 conflicts: [
   "mirage-types-lwt" {< "3.0.0"}
   "x509" {< "0.6.0"}
-  "x509" {>= "0.7.0"}
   "tls" {< "0.8.0"}
+  "mirage-clock" {>= "3.0.0"}
 ]
 
 build: [

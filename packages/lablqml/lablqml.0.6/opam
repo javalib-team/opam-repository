@@ -23,10 +23,10 @@ install: [
 remove: [make "uninstall"]
 flags: [ light-uninstall ]
 depends: [
-  "ocaml" {>= "4.03.0"}
+  "ocaml" {>= "4.03.0" & < "4.09" }
   "ocamlfind" {build}
   "dune"
-  "configurator" {build & < "v0.13"}
+  "configurator" {build & < "v0.14"}
   "conf-qt" {>= "5.2.1"}
   "ppxlib" {< "0.9.0"}
   "conf-pkg-config" {build}

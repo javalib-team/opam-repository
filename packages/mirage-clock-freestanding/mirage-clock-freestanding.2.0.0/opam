@@ -16,7 +16,8 @@ MirageOS.
 depends: [
   "ocaml" {>= "4.04.2"}
   "dune"
-  "mirage-clock" {>= "1.2.0"}
+  "dune-configurator"
+  "mirage-clock" {>= "1.2.0" & < "3.0.0"}
   "mirage-clock-lwt" {>= "1.2.0"}
   "lwt"
 ]

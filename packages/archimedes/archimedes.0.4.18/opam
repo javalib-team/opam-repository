@@ -6,7 +6,7 @@ authors: [ "Christophe Troestler <Christophe.Troestler@umons.ac.be>"
            "Noémie Meunier <noemie_6462@hotmail.com>"
            "Bertrand Desmons <bibi-6@hotmail.fr>"
            "Xavier Deschuyteneer <xavier.deschuyteneer@gmail.com>" ]
-license: "LGPL-3.0 with OCaml linking exception"
+license: "LGPL-3.0-only with OCaml-LGPL-linking-exception"
 homepage: "http://forge.ocamlcore.org/projects/archimedes/"
 dev-repo:
   "git+http://forge.ocamlcore.org/anonscm/git/archimedes/archimedes.git"
@@ -46,7 +46,10 @@ depends: [
   "ocamlfind" {build}
 ]
 depopts: [
-  "cairo2" {< "0.6"}
+  "cairo2"
+]
+conflicts: [
+  "cairo2" {>= "0.6"}
 ]
 synopsis: "Extensible 2D plotting library."
 description: """

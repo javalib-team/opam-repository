@@ -2,7 +2,6 @@ opam-version: "2.0"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
-  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
   ["dune" "build" "-p" name "@doc"] {with-doc}
 ]
 maintainer: ["Jeffas <dev@jeffas.io>"]
@@ -24,7 +23,7 @@ depends: [
   "lwt" {>= "4.2"}
   "lwt_ppx" {>= "1.2"}
   "ppx_deriving" {>= "4.3"}
-  "ppx_expect" {>= "0.12"}
+  "ppx_expect" {>= "0.12" & < "v0.14"}
 ]
 url {
   src:

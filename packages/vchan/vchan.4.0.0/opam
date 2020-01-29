@@ -18,13 +18,13 @@ depends: [
   "lwt" {>= "2.5.0"}
   "cstruct" {>= "1.9.0"}
   "ppx_tools"
-  "ppx_sexp_conv" {< "v0.13"}
+  "ppx_sexp_conv" {< "v0.14"}
   "ppx_cstruct"
   "io-page"
   "mirage-flow-lwt" {>= "1.0.0"}
   "xenstore" {>= "1.2.2"}
   "xenstore_transport" {>= "1.0.0"}
-  "sexplib" {< "v0.13"}
+  "sexplib" {< "v0.14"}
   "cmdliner"
   "result"
   "ounit" {with-test}
@@ -39,3 +39,4 @@ url {
     "https://github.com/mirage/ocaml-vchan/releases/download/4.0.0/vchan-4.0.0.tbz"
   checksum: "md5=8b88d9f8d013469e99ecf5a91b9f78e3"
 }
+available: false

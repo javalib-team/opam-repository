@@ -28,7 +28,7 @@ remove: [
   ["rm" "-f" "%{bin}%/sqlgg" "%{bin}%/sqlgg.exe"]
 ]
 depends: [
-  "ocaml" {>= "4.02.0"}
+  "ocaml" {>= "4.02.0" & < "4.08.0"}
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "mybuild" {build}
@@ -37,11 +37,13 @@ depends: [
   ("extlib" | "extlib-compat")
   "base-unix"
   "ounit"
-  "camlp4" {< "4.08"}
 ]
 depopts: [
   "mysql"
   "sqlite3"
+]
+conflicts: [
+  "sqlite3" {>= "5.0.0"}
 ]
 synopsis: "SQL Guided (code) Generator"
 description: """

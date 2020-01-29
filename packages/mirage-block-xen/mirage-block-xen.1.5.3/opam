@@ -24,7 +24,7 @@ build: [
 depends: [
   "ocaml" {>= "4.03.0"}
   "ocamlfind" {build}
-  "jbuilder" {build & >= "1.0+beta9"}
+  "jbuilder" {>= "1.0+beta9"}
   "cmdliner"
   "logs"
   "stringext"
@@ -50,3 +50,4 @@ url {
     "https://github.com/mirage/mirage-block-xen/releases/download/1.5.3/mirage-block-xen-1.5.3.tbz"
   checksum: "md5=7a5bc94d4dc2d0584d25e191a35793a5"
 }
+available: false

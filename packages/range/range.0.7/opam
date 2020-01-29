@@ -7,13 +7,13 @@ Designed for making distributed computing easier with libraries like functory.
 """
 maintainer : "Aldrik KLEBER <contact@aldrik.net>"
 authors : "Aldrik KLEBER"
-license : "gpl-v3"
+license : "GPL-3.0-only"
 homepage : "https://github.com/aldrikfr/range"
 dev-repo: "git+https://github.com/aldrikfr/range"
 bug-reports :"https://github.com/aldrikfr/range/issues"
 depends: [
   "ocaml" {>= "4.03.0"}
-  "base" {>= "v0.12"}
+  "base" {>= "v0.12" & < "v0.14"}
   "dune" {>= "1.8"}
 ]
 build: ["dune" "build" "-p" name "-j" jobs]
